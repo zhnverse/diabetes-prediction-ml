@@ -1,0 +1,34 @@
+# Ignore lab notebooks (not project files)
+CSE 422 Lab 5 part 1 [K -Means Clustering].ipynb
+CSE 422 Lab 5 part 2 [Gaussian Mixture Model (GMM)].ipynb
+CSE422_NeuralNetworkLab.ipynb
+EDA CSE422 Lab.ipynb
+Introduction_to_ML.ipynb
+Introduction_to_Scikit_Learn_1.ipynb
+Intro_to_ML_(Model_Training).ipynb
+Intro_to_Scikit_Learn.ipynb
+K_Fold_Cross_Validation.ipynb
+K_Means_Clustering.ipynb
+Model_Evaluation.ipynb
+Neural_Network.ipynb
+
+# Ignore lecture PDFs
+*.pdf
+
+# Ignore large/extra CSV files
+modified_train.csv
+
+# Ignore Excel files
+*.xlsx
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
