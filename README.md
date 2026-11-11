@@ -1,49 +1,57 @@
-# CSE422 Diabetes Prediction — ML Project
+# Diabetes Risk Prediction — Machine Learning Pipeline 🩺
 
-A machine learning project for **CSE422 Lab** using the **Diabetes Dataset** (100,000 records).
+An end-to-end supervised and unsupervised machine learning pipeline predicting diabetes onset using clinical diagnostic data (100,000 patient records).
+
+---
 
 ## 📋 Project Overview
-Predicts whether a patient has diabetes based on clinical features using supervised and unsupervised learning.
+This project builds, benchmarks, and evaluates multiple machine learning classifiers to predict diabetes risk based on medical diagnostics. It explores feature scaling, handling class imbalance, exploratory data analysis (EDA), and deep classification performance metrics.
 
-## 📁 Files
-| File | Description |
+---
+
+## 🤖 Models & Benchmarks
+
+| Model | Architecture / Type | Accuracy | AUC Score |
+|---|---|---|---|
+| **Decision Tree** | Supervised Classifier | **97.0%** | **0.971** |
+| **Neural Network** | Multilayer Perceptron (MLP: 128 → 64 → 32) | **96.9%** | **0.972** |
+| **Logistic Regression** | Linear Probabilistic Classifier | **95.9%** | **0.956** |
+| **K-Means Clustering** | Unsupervised Pattern Discovery (k=2) | — | Cluster Analysis |
+
+---
+
+## 📁 Repository Structure
+| File / Directory | Description |
 |---|---|
-| `CSE422_Diabetes_Project_Final.ipynb` | **Main project notebook** (submit this) |
-| `CSE422_Diabetes_Project.ipynb` | Extended version (4 supervised models) |
-| `diabetes_dataset.csv` | Dataset (100,000 rows, 9 columns) |
-| `project_guideline.md` | Project requirements |
+| `CSE422_Diabetes_Project_Final.ipynb` | Comprehensive ML pipeline notebook: EDA, preprocessing, model training, ROC-AUC curves |
+| `CSE422_Diabetes_Project.ipynb` | Supervised model benchmarking & hyperparameter tuning |
+| `diabetes_dataset.csv` | Clinical dataset (100,000 records, 9 diagnostic features) |
 
-## 🤖 Models Used
-| Model | Type |
-|---|---|
-| Decision Tree | Supervised |
-| Logistic Regression | Supervised |
-| Neural Network (MLP 128→64→32) | Supervised (Mandatory) |
-| KMeans Clustering (k=2) | Unsupervised |
+---
 
-## 📊 Results
-| Model | Accuracy | AUC |
-|---|---|---|
-| Decision Tree | 97.0% | 0.971 |
-| Logistic Regression | 95.9% | 0.956 |
-| Neural Network | 96.9% | 0.972 |
+## 📊 Dataset Features
+The dataset contains 100,000 records with diagnostic indicators:
+* Demographic: `gender`, `age`
+* Medical History: `hypertension`, `heart_disease`, `smoking_history`
+* Clinical Biomarkers: `bmi`, `HbA1c_level`, `blood_glucose_level`
+* **Target Label:** `diabetes` (0: Non-Diabetic, 1: Diabetic)
 
-## 🚀 How to Run
-1. Clone the repo:
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd CSE422
+   git clone https://github.com/zhnverse/diabetes-prediction-ml.git
+   cd diabetes-prediction-ml
    ```
-2. Install dependencies:
+
+2. **Install requirements:**
    ```bash
    pip install pandas numpy matplotlib seaborn scikit-learn
    ```
-3. Open the notebook:
+
+3. **Run the Jupyter Notebook:**
    ```bash
    jupyter notebook CSE422_Diabetes_Project_Final.ipynb
    ```
-   Or upload to **Google Colab** and upload `diabetes_dataset.csv` via the Files panel.
-
-## 📦 Dataset
-The dataset contains 100,000 patient records with features:
-`gender`, `age`, `hypertension`, `heart_disease`, `smoking_history`, `bmi`, `HbA1c_level`, `blood_glucose_level` → target: `diabetes`
